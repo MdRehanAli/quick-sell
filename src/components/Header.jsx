@@ -1,10 +1,15 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Header = () => {
     return (
-        <div>
-            <h1>This is header</h1>
-        </div>
+        <header>
+            <nav>
+                <Link href="/">Home</Link>
+                <Link href="/items">Items</Link>
+                <Link href="/login">Login</Link>
+            </nav>
+        </header>
     );
 };
 
