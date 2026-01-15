@@ -1,36 +1,133 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 QuickSell | Buy, Sell & Discover Products Easily
 
-## Getting Started
+## 🏷️ Project Theme:
 
-First, run the development server:
+**QuickSell** is a modern and user-friendly **peer-to-peer marketplace web application** built using **Next.js (App Router)** and **Express.js**.
+The platform allows users to **browse products publicly**, while **authenticated users can sell products** through a protected interface.
+QuickSell focuses on simplicity, speed, and real-world full-stack development practices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🎯 Purpose:
+
+The main goal of **QuickSell** is to create a **simple selling platform** where people can easily list products for sale and explore available products without mandatory login.
+This project demonstrates:
+
+* Public and protected routing
+* Mock authentication using cookies
+* API-based data fetching and submission
+* Clean UI and responsive design
+
+---
+
+## 🔗 Live Link:
+[👉 Visit QuickSell Website](https://)
+
+---
+
+## 🔐 Demo Login Credentials:
+
+```
+Email: quicksell@gmail.com
+Password: QuickSell
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🛍️ Key Features:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* 🏠 **Landing Page:** Clean landing page with 7 structured sections (excluding navbar & footer).
+* 🔐 **Mock Authentication:** Hardcoded login system using cookies for session management.
+* 🛒 **Browse Products:** Public product listing page with product cards.
+* 📄 **Product Details:** View full product details including description, price, and image.
+* ➕ **Sell Product (Protected):** Logged-in users can add products for sale.
+* 🔒 **Protected Routes:** Unauthorized users are redirected to the login page.
+* 🔔 **Toast Notifications:** Success notification after adding a product.
+* 📱 **Responsive Design:** Fully responsive across mobile, tablet, and desktop devices.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧭 Route Overview:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Route            | Description                   |
+| ---------------- | ----------------------------- |
+| `/`              | Landing Page                  |
+| `/login`         | Login Page                    |
+| `/products`      | Product Listing Page (Public) |
+| `/products/[id]` | Product Details Page (Public) |
+| `/sell-product`  | Sell Product Page (Protected) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚙️ Technologies Used:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Frontend:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Next.js 15/16 (App Router)**
+* **React.js**
+* **Tailwind CSS**
+* **JavaScript (ES6+)**
+* **Cookie-based Authentication**
+* **React Toastify**
+
+### Backend:
+
+* **Node.js**
+* **Express.js**
+* **REST API**
+* **JSON / Database for Product Storage**
+
+---
+
+## 📦 NPM Packages Used (Client Side):
+
+* `next`
+* `react`
+* `react-dom`
+* `tailwindcss`
+* `js-cookie`
+* `react-toastify`
+
+---
+
+## 📦 NPM Packages Used (Server Side):
+
+* `express`
+* `cors`
+* `dotenv`
+* `uuid`
+
+---
+
+## 🧪 Setup & Installation:
+
+### Frontend Setup:
+
+```bash
+npm install
+npm run dev
+```
+
+### Backend Setup:
+
+```bash
+npm install
+npm start
+```
+
+---
+
+## 🚀 Future Enhancements:
+
+* User registration system
+* Real authentication (NextAuth.js)
+* Product edit & delete functionality
+* Image upload support
+* Seller dashboard
+* Category-based filtering
+
+---
+
+## 🏆 Conclusion:
+
+**QuickSell** is a lightweight yet practical marketplace application that showcases **modern full-stack development concepts**, including authentication, protected routes, API integration, and responsive UI using **Next.js and Express.js**.
