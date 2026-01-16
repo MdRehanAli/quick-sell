@@ -25,7 +25,7 @@ const Works = () => {
         <section id='works' className="bg-white dark:bg-gray-900/50 my-20">
             <div className="max-w-7xl mx-auto px-6 w-11/12">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-black mb-4">How QuickSell Works</h1>
+                    <h2 className="text-3xl font-bold mb-2">How QuickSell Works</h2>
                     <p className="text-[#658683] max-w-2xl mx-auto">
                         Selling and buying has never been this simple and secure. Follow these three steps to get started.
                     </p>
