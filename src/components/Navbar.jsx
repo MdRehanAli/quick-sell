@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
+import { MdSell } from 'react-icons/md';
 
 const Navbar = () => {
     const navLinks = <>
@@ -21,7 +22,12 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">QuickSell</a>
+                    <Link href="/" className="btn btn-ghost px-0 flex items-center gap-2">
+                        <div className="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <span className="material-symbols-outlined"><MdSell /></span>
+                        </div>
+                        <span className="text-xl font-bold tracking-tight">QuickSell</span>
+                    </Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
