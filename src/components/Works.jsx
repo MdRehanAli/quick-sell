@@ -22,7 +22,7 @@ const Works = () => {
     ];
 
     return (
-        <section className="bg-white dark:bg-gray-900/50 py-24">
+        <section id='works' className="bg-white dark:bg-gray-900/50 py-24">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-black mb-4">How QuickSell Works</h2>

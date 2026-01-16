@@ -22,9 +22,9 @@ const Banner = () => {
                         <Link href={"/items"} className="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform shadow-lg shadow-primary/20">
                             Start Shopping
                         </Link>
-                        <button className="bg-white dark:bg-gray-800 border border-[#dce5e4] dark:border-gray-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#f0f4f4] transition-colors">
+                        <Link href={"#works"} className="bg-white dark:bg-gray-800 border border-[#dce5e4] dark:border-gray-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#f0f4f4] transition-colors">
                             How it works
-                        </button>
+                        </Link>
                     </div>
                     <div className="flex items-center gap-4 pt-4">
                         <div className="flex -space-x-3">
