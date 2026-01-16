@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import Categories from "@/components/Categories";
 import Features from "@/components/Features";
+import Newsletter from "@/components/Newsletter";
 import Testimonials from "@/components/Testimonials";
 import Trade from "@/components/Trade";
 import Works from "@/components/Works";
@@ -15,6 +16,7 @@ export default function Home() {
       <Trade></Trade>
       <Testimonials></Testimonials>
       <Works></Works>
+      <Newsletter></Newsletter>
     </div>
   );
 }
