@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 
-const Header = () => {
+const Navbar = () => {
     return (
         <header>
             <nav>
@@ -13,4 +13,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Navbar;
