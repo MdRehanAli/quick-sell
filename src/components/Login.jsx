@@ -9,21 +9,27 @@ const LoginPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const demoEmail = 'quicksell@gmail.com';
+    const demoPassword = 'QuickSell'
 
 
     const handleLogin = (e) => {
         e.preventDefault();
-        if (email === 'quicksell@gmail.com' && password === 'QuickSell') {
+        if (email === demoEmail && password === demoPassword) {
             document.cookie = "auth=true; path=/";
-            router.push("/items")
+            router.push("/items");
         }
         else {
 
         }
     }
 
-    const handleDemoLogin = (e) => {
+    const handleDemoLogin = () => {
+        setEmail(demoEmail);
+        setPassword(demoPassword);
 
+        document.cookie = "auth=true; path=/";
+        router.push("/items");
     }
 
     return (
@@ -49,7 +55,12 @@ const LoginPage = () => {
                         <div><a className="link link-hover">Forgot password?</a></div>
                         <button className="btn btn-primary mt-4">Login</button>
                     </fieldset>
+                    <button onClick={() => handleDemoLogin()} className="flex flex-col items-center justify-center gap-2 p-3 rounded-lg border border-border-dark hover:border-primary/60 hover:bg-primary/10 transition-all group">
+                        <div className='text-primary group-hover:scale-110 transition-transform text-2xl'><FaRegUser className='' /></div>
+                        <span className="text-primary text-xl font-bold tracking-wider">Demo Login</span>
+                    </button>
                 </form>
+
             </div>
         </div>
     );
