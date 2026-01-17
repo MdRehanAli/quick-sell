@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
 import { FaRegUser } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const LoginPage = () => {
     const router = useRouter();
@@ -18,9 +19,23 @@ const LoginPage = () => {
         if (email === demoEmail && password === demoPassword) {
             document.cookie = "auth=true; path=/";
             router.push("/items");
+
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Login successfully",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
         else {
-
+            Swal.fire({
+                position: "top-end",
+                icon: "error",
+                title: "Login failed! Provide correct credentials",
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
     }
 
@@ -28,8 +43,8 @@ const LoginPage = () => {
         setEmail(demoEmail);
         setPassword(demoPassword);
 
-        document.cookie = "auth=true; path=/";
-        router.push("/items");
+        // document.cookie = "auth=true; path=/";
+        // router.push("/items");
     }
 
     return (
@@ -60,7 +75,6 @@ const LoginPage = () => {
                         <span className="text-primary text-xl font-bold tracking-wider">Demo Login</span>
                     </button>
                 </form>
-
             </div>
         </div>
     );
