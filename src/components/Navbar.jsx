@@ -1,45 +1,72 @@
-import Link from 'next/link';
-import React from 'react';
-import { MdSell } from 'react-icons/md';
+"use client";
+
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { MdSell } from "react-icons/md";
 
 const Navbar = () => {
-    const navLinks = <>
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/items">Items</Link></li>
-        <li><Link href="/login">Login</Link></li>
-    </>
-    return (
-        <header className='shadow-sm sticky top-0 z-50'>
-            <div className="navbar bg-base-100 w-11/12 max-w-7xl mx-auto">
-                <div className=" navbar-start">
-                    <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-                        </div>
-                        <ul
-                            tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            {navLinks}
-                        </ul>
-                    </div>
-                    <Link href="/" className="btn btn-ghost px-0 flex items-center gap-2">
-                        <div className="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
-                            <span className="material-symbols-outlined"><MdSell /></span>
-                        </div>
-                        <span className="text-xl font-bold tracking-tight">QuickSell</span>
-                    </Link>
-                </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        {navLinks}
-                    </ul>
-                </div>
-                <div className="navbar-end">
-                    <Link href={"/login"} className="btn">login</Link>
-                </div>
+  const [isAuth, setIsAuth] = useState(false);
+
+  const checkAuth = () => {
+    setIsAuth(document.cookie.includes("auth=true"));
+  };
+
+  useEffect(() => {
+    checkAuth();
+
+    // listen for login/logout events
+    window.addEventListener("auth-change", checkAuth);
+
+    return () => {
+      window.removeEventListener("auth-change", checkAuth);
+    };
+  }, []);
+
+  const logout = () => {
+    document.cookie = "auth=; Max-Age=0; path=/";
+    window.dispatchEvent(new Event("auth-change"));
+    window.location.href = "/login";
+  };
+
+  return (
+    <header className="shadow-sm sticky top-0 z-50">
+      <div className="navbar bg-base-100 w-11/12 max-w-7xl mx-auto">
+
+        {/* LEFT */}
+        <div className="navbar-start">
+          <Link href="/" className="btn btn-ghost px-0 flex items-center gap-2">
+            <div className="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+              <MdSell />
             </div>
-        </header>
-    );
+            <span className="text-xl font-bold">QuickSell</span>
+          </Link>
+        </div>
+
+        {/* CENTER */}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/items">Items</Link></li>
+            {isAuth && <li><Link href="/items/add">Add Item</Link></li>}
+          </ul>
+        </div>
+
+        {/* RIGHT — SINGLE BUTTON */}
+        <div className="navbar-end">
+          {!isAuth ? (
+            <Link href="/login" className="btn btn-primary">
+              Login
+            </Link>
+          ) : (
+            <button onClick={logout} className="btn btn-error">
+              Logout
+            </button>
+          )}
+        </div>
+
+      </div>
+    </header>
+  );
 };
 
 export default Navbar;

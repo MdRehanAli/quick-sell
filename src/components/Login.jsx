@@ -18,6 +18,7 @@ const LoginPage = () => {
         e.preventDefault();
         if (email === demoEmail && password === demoPassword) {
             document.cookie = "auth=true; path=/";
+            window.dispatchEvent(new Event("auth-change"));
             router.push("/items");
 
             Swal.fire({
@@ -40,11 +41,17 @@ const LoginPage = () => {
     }
 
     const handleDemoLogin = () => {
-        setEmail(demoEmail);
-        setPassword(demoPassword);
+        document.cookie = "auth=true; path=/";
+        window.dispatchEvent(new Event("auth-change"));
+        router.push("/items");
 
-        // document.cookie = "auth=true; path=/";
-        // router.push("/items");
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Demo login successful",
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
 
     return (
