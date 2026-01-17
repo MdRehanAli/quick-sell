@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "title": "MacBook Pro 13\" (M2)",
+        "price": 899,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBtdmrpscklzIwupCT4PPB4FWK0y_k8sOcTuyOM6k3d3YHvadzj-Ve7m3qFFj9ffe-W2JXvTDs8wcyEBGR68QJ9SUaDS43d6TbPgb2hnAic9fYROS0JEv4CJUeTEc4wP48JiEkzOGrBDBGyReOM0jmxkpcj93aCh8Cw4WGMxWX4WyTnhfogGdUo78panme8OvBrKFYIf5lKnWmCbC5SffR5kHmDsUHZayk0SFY9x29ITA4_QWRX3C0ry7c0COJxyXNRk40YD4Sfvyo",
+        "condition": "New",
+        "conditionColor": "bg-[#F28E66]/10 text-[#F28E66]",
+        "brand": "Apple",
+        "location": "Palo Alto",
+        "description": "Pristine condition, only 3 months old. Battery cycle count at 12. Includes original box and charger...",
+        "category": "Electronics"
+    },
+    {
+        "id": 2,
+        "title": "Sony A7III + FE 28-70mm",
+        "price": 1250,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuClcKCrBkQLPsQUuNjWmqC9uZRWgJWInauOQdPo-ejZCAcC0E0Az2xPLykA_SHkAK2vaQmn8y_pnPocQXITdDaK_RSru3IaDFy6kIiGgp09QZX9CLNVngV9uslk6A6T1D-zXeQb9DiKRuF6JAqr-wMVDGuQcx9wOq8qvilDwpIgh0wsiowrnwARpUcAxzo5N9_6NxPmcKSP9bwgVrFhb7IY8QX7lRuteANXB9dwOkcP3F8Q_0rhHxsFMHGtDO2FkguqH1sHNj0WWlg",
+        "condition": "Featured",
+        "conditionColor": "bg-primary/10 text-primary",
+        "brand": "Sony",
+        "location": "Austin",
+        "description": "Full-frame mirrorless camera bundle. Perfect for professionals. Gently used, lens is spotless...",
+        "category": "Electronics"
+    },
+    {
+        "id": 3,
+        "title": "1960s Omega Seamaster",
+        "price": 210,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCuOcqOSNZuvDcutRiTGAbQxFFZCXrJn0CEulEqo1wyGdc3bbH020LHdgTG8oMMEg3PkhtHlUkU8_noRtdClpbafWABnQHq15_UGrE7q45fqsgorndJVPr_f1Psuwsf5qHmvowsficX8oLw3jYbNulsqPiovTPdEkPinSUFRmnx4SpcNK5aWymkyokMIXqKhIjaCWW9wKBaLI4DEan6KWP2gZw2SuGyyccK-CGUrD2BlnxqlTWaiuT9d5kxRHlYK8RdACAyPdEsYMc",
+        "condition": null,
+        "conditionColor": null,
+        "brand": "Vintage",
+        "location": "Brooklyn",
+        "description": "Rare find. Automatic movement works perfectly. Genuine leather strap, light scratches on casing...",
+        "category": "Fashion"
+    },
+    {
+        "id": 4,
+        "title": "Aeron Chair (Size B)",
+        "price": 450,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA_0nFXn7zumg55yXUgrKNRnMmmx9jh02AjX85LBLxfGFKiU-uDaJmQlwp3SHISgrMmYq14y14AfwBA06BdC5cV-ZfkzjmgRWRkXGYC9570slh7NA1-rjSDablzs3hEKXV4YCuYTt-eWYG3NNS5vaDG43jnJwyQIwSIo6QixAeQ-u9ajG8GugFl_MwLY7bpMg1XzQjhVvaw4S-4BPI2WRiTwt4ecwZiL1s57GJMPvjLHAW6hquZ4EMemd1xT4WuhvOjsWgPZnaoZ1E",
+        "condition": null,
+        "conditionColor": null,
+        "brand": "Herman Miller",
+        "location": "Seattle",
+        "description": "Fully adjustable, mineral colorway. No tears in the mesh. Perfect for home office setup...",
+        "category": "Furniture"
+    },
+    {
+        "id": 5,
+        "title": "34\" Odyssey G5 Curved",
+        "price": 325,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAn-HMhep_dKKZo_OOFiit3VLcO7Z4i4hM7OySqMwxcpczb3beTTKtNwGRrvwrvSoxhlyoVMgIqnLM4zLuz1xhliq2A92cEARXGOIbTvnP95Su4w9blhFOK2Ef6kib3tQPY6SxYWto8tm-bcmS76buUz5fnFE_Ah1Kih5sN3dUn237WmWH6YAO9MKEIjMVPYHOYO8BE95FP7C-aZg1QS3HSigp3r4td_IpZhgwlmL9DU10gVjiZR8hxljM135tctLIw-96hSWpyZ2w",
+        "condition": null,
+        "conditionColor": null,
+        "brand": "Samsung",
+        "location": "Chicago",
+        "description": "144Hz, 1ms response time. Ultra-wide for immersive gaming. Original packaging included...",
+        "category": "Electronics"
+    },
+    {
+        "id": 6,
+        "title": "GameBoy Color (Custom Shell)",
+        "price": 150,
+        "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA2yo9IYxvKXu_Xwvu09woWENJIeyFCYxt6VTF8C65xH0gd94Hees9h9PpPOazhupda-THYiGFN2j3ovxzU-QCNtPf9CI6oR-c6y0H5ymNNISckwaFRO5eOqq2SSrWllklEqreelxOX6PukC4BM5FvxBrF_scL_dkl0GVEtWiNVBivmCKG__wkf1RexBMaLFiHha8BOIWegoNa3ouNVaDF6MX-wnt8IoxqXvYG3x_kPywak-UoYaVwCTVzZ5G2vbdxFV3f2ZbgNKEY",
+        "condition": null,
+        "conditionColor": null,
+        "brand": "Nintendo",
+        "location": "Portland",
+        "description": "Backlit screen mod, custom clear shell. Works perfectly with all classic titles...",
+        "category": "Electronics"
+    }
+]
