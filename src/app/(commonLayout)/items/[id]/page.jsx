@@ -1,11 +1,209 @@
-import React from 'react';
+import ItemDetails from '@/components/ItemDetails'
 
-const ItemDetails = () => {
-    return (
-        <div>
-            <h1>Item Details</h1>
-        </div>
-    );
-};
+const ItemDetailsPage = async ({ params }) => {
+    const { id } = await params;
+    const items = [
+  {
+    "id": 1,
+    "title": "Yamaha FZ-S V3 Motorcycle",
+    "price": 295000,
+    "image": "https://i.ibb.co.com/qF57V9kB/Yamaha-FZ-S-V3-Motorcycle.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "Yamaha",
+    "location": "Dhaka",
+    "description": "Experience thrill and efficiency with the brand new Yamaha FZ-S V3. This motorcycle comes with a refined engine for improved mileage and a muscular design ideal for both city commuting and long rides. With superior suspension and responsive braking, the FZ-S V3 guarantees a comfortable and controlled riding experience. Perfect for daily use, college students, and professionals alike.",
+    "category": "Automotive"
+  },
+  {
+    "id": 2,
+    "title": "Dell Inspiron 15 Laptop",
+    "price": 85000,
+    "image": "https://i.ibb.co.com/GQMWQk2p/Dell-Inspiron-15-Laptop.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "Dell",
+    "location": "Chattogram",
+    "description": "The Dell Inspiron 15 combines robust performance with sleek design. Powered by an 11th Gen Intel Core i5 processor, 8GB RAM, and a 512GB SSD, this laptop delivers smooth multitasking and fast boot speeds. Its vibrant 15.6\" display offers crisp visuals for work, entertainment, and study. Built for reliability and everyday productivity.",
+    "category": "Electronics"
+  },
+  {
+    "id": 3,
+    "title": "Asus ROG Gaming Laptop",
+    "price": 175000,
+    "image": "https://i.ibb.co.com/Mzxhd0d/Asus-ROG-Gaming-Laptop.jpg",
+    "condition": "Featured",
+    "conditionColor": "bg-primary/10 text-primary",
+    "brand": "Asus",
+    "location": "Sylhet",
+    "description": "Dominate the gaming world with the ASUS ROG Gaming Laptop. Equipped with powerful RTX graphics, 16GB RAM, and a blazing fast 1TB SSD, this machine handles demanding games and creative workflows. Its cooling system keeps performance stable under heavy loads, and the high refresh rate display provides smooth gaming visuals. Ideal for serious gamers, streamers, and content creators.",
+    "category": "Electronics"
+  },
+  {
+    "id": 4,
+    "title": "Office Chair with Wheels",
+    "price": 8500,
+    "image": "https://i.ibb.co.com/cXhrJ8tR/Office-Chair-with-Wheels.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "Ikea",
+    "location": "Rajshahi",
+    "description": "Enhance your workspace comfort with this ergonomic Office Chair equipped with smooth-rolling wheels and adjustable height. The breathable seat cushion and back support ensure comfort during extended working hours. Ideal for home offices, study rooms, and professional workspaces.",
+    "category": "Furniture"
+  },
+  {
+    "id": 5,
+    "title": "Sony WH-1000XM4 Headphones",
+    "price": 29000,
+    "image": "https://i.ibb.co.com/7xRz6dny/Sony-WH-1000-XM4-Headphones.jpg",
+    "condition": "Featured",
+    "conditionColor": "bg-primary/10 text-primary",
+    "brand": "Sony",
+    "location": "Khulna",
+    "description": "Experience premium sound quality with Sony WH-1000XM4 Noise Cancelling Headphones. These wireless headphones offer industry-leading noise cancellation, up to 30 hours of battery life, intuitive touch controls, and comfort for long listening sessions. Perfect for travel, work, and leisure.",
+    "category": "Electronics"
+  },
+  {
+    "id": 6,
+    "title": "Wooden Study Table",
+    "price": 15000,
+    "image": "https://i.ibb.co.com/PGfzx7DY/Wooden-Study-Table.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "HomeCraft",
+    "location": "Barishal",
+    "description": "This sturdy Wooden Study Table is designed for both style and durability. Featuring a smooth tabletop surface, integrated drawers for storage, and strong support, it is perfect for students, professionals, and writers. Its timeless finish blends seamlessly with modern interiors.",
+    "category": "Furniture"
+  },
+  {
+    "id": 7,
+    "title": "Dining Table Set - 6 Chairs",
+    "price": 55000,
+    "image": "https://i.ibb.co.com/cXkPGskF/Dining-Table-Set-6-chairs.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "HomeStyle",
+    "location": "Dhaka",
+    "description": "Host family dinners in style with this elegant Dining Table Set that includes six cushioned chairs. Its premium wood construction, smooth surfaces, and classic design ensure durability and timeless beauty. Great for living rooms, dining areas, and festive gatherings.",
+    "category": "Furniture"
+  },
+  {
+    "id": 8,
+    "title": "Office Sofa Set",
+    "price": 120000,
+    "image": "https://i.ibb.co.com/ycZr50Km/Office-Sofa-Set.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "ComfortCo",
+    "location": "Gazipur",
+    "description": "Upgrade your lounge area with this luxurious Office Sofa Set. Featuring plush cushions, stylish design, and durable construction, this set is perfect for waiting areas, offices, and living spaces. Designed for comfort and elegance.",
+    "category": "Furniture"
+  },
+  {
+    "id": 9,
+    "title": "HP DeskJet 2331 Printer",
+    "price": 8500,
+    "image": "https://i.ibb.co.com/ccnGjctX/HP-Desk-Jet-2331-Printer.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "HP",
+    "location": "Cumilla",
+    "description": "The HP DeskJet 2331 is a compact and reliable printer designed for home and small office use. Featuring wireless connectivity, easy setup, and efficient printing, this model delivers crisp documents and vibrant photos effortlessly.",
+    "category": "Electronics"
+  },
+  {
+    "id": 10,
+    "title": "Nikon D5600 DSLR Camera",
+    "price": 72000,
+    "image": "https://i.ibb.co.com/pvL3CRNR/Nikon-D5600-DSLR-Camera.jpg",
+    "condition": "Used",
+    "conditionColor": "bg-[#FBBF24]/10 text-[#FBBF24]",
+    "brand": "Nikon",
+    "location": "Dhaka",
+    "description": "Capture stunning photos with the Nikon D5600 DSLR camera. Known for its excellent image quality and intuitive controls, this lightly used camera includes an 18-55mm lens. Perfect for photography enthusiasts and students.",
+    "category": "Electronics"
+  },
+  {
+    "id": 11,
+    "title": "Mini Refrigerator",
+    "price": 22000,
+    "image": "https://i.ibb.co.com/75VZBmk/Mini-Refrigerator.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "Samsung",
+    "location": "Sylhet",
+    "description": "This Mini Refrigerator is compact yet highly efficient, perfect for small apartments, dormitories, and office spaces. Featuring frost-free cooling and adjustable shelves, it offers convenience and space-saving design.",
+    "category": "Home Appliances"
+  },
+  {
+    "id": 12,
+    "title": "Electric Kettle",
+    "price": 3200,
+    "image": "https://i.ibb.co.com/Kxn2dWJx/Electric-Kettle.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "Philips",
+    "location": "Rajshahi",
+    "description": "Quick boil electric kettle with 1.5L capacity and auto shut-off safety feature. Durable stainless steel interior and ergonomic design make everyday use effortless and safe.",
+    "category": "Home Appliances"
+  },
+  {
+    "id": 13,
+    "title": "Apple MacBook Air M1",
+    "price": 145000,
+    "image": "https://i.ibb.co.com/rK01TZJb/Apple-Mac-Book-Air-M1.jpg",
+    "condition": "Featured",
+    "conditionColor": "bg-primary/10 text-primary",
+    "brand": "Apple",
+    "location": "Dhaka",
+    "description": "The Apple MacBook Air with M1 chip delivers impressive performance, long battery life, and stunning Retina display quality. Perfect for students, professionals, and creative users who demand speed and reliability.",
+    "category": "Electronics"
+  },
+  {
+    "id": 14,
+    "title": "Used AC 1.5 Ton",
+    "price": 67000,
+    "image": "https://i.ibb.co.com/sd8BGRM3/Used-AC-1-5-Ton.jpg",
+    "condition": "Used",
+    "conditionColor": "bg-[#FBBF24]/10 text-[#FBBF24]",
+    "brand": "General",
+    "location": "Khulna",
+    "description": "This 1.5 Ton used air conditioner offers reliable cooling performance and comes with remote and installation kit. Ideal for bedrooms and small living areas in warm climates.",
+    "category": "Home Appliances"
+  },
+  {
+    "id": 15,
+    "title": "iPhone 13 Pro Max",
+    "price": 98000,
+    "image": "https://i.ibb.co.com/sdB95P9k/iphone-13-pro-max.jpg",
+    "condition": "Featured",
+    "conditionColor": "bg-primary/10 text-primary",
+    "brand": "Apple",
+    "location": "Barishal",
+    "description": "Apple iPhone 13 Pro Max with 128GB storage delivers a powerful A15 Bionic experience, advanced camera features, and long battery life. Excellent for everyday use, photography, and gaming.",
+    "category": "Electronics"
+  },
+  {
+    "id": 16,
+    "title": "Samsung Galaxy Watch 6",
+    "price": 37000,
+    "image": "https://i.ibb.co.com/qY1Jrkqy/Samsung-Galaxy-Watch-6.jpg",
+    "condition": "New",
+    "conditionColor": "bg-[#4ADE80]/10 text-[#4ADE80]",
+    "brand": "Samsung",
+    "location": "Mymensingh",
+    "description": "Stay connected and healthy with the Samsung Galaxy Watch 6 — a smartwatch that blends cutting-edge technology with stylish design. Featuring advanced health monitoring, long battery life, and customizable watch faces, it's perfect for fitness tracking, notifications, and everyday convenience. Compatible with both Android and iOS devices, this watch is a perfect companion for active lifestyles and tech enthusiasts.",
+    "category": "Electronics"
+  }
+]
 
-export default ItemDetails;
+    const item = items.find(i => i.id == id);
+
+    if(!item){
+        return <h2>Item Not Found</h2>
+    }
+
+    return <ItemDetails item={item} />
+}
+
+export default ItemDetailsPage

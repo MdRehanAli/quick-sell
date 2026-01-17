@@ -1,11 +1,12 @@
+import Items from '@/components/Items';
 import React from 'react';
 
-const Items = () => {
+const ItemsPage = () => {
     return (
         <div>
-            <h1>All Items: </h1>
+            <Items></Items>
         </div>
     );
 };
 
-export default Items;
+export default ItemsPage;

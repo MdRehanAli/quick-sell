@@ -34,8 +34,8 @@ const Navbar = () => {
     );
 
     return (
-        <header className="shadow-sm sticky top-0 z-50">
-            <div className="navbar bg-base-100 w-11/12 max-w-7xl mx-auto">
+        <header className="shadow-sm sticky top-0 z-50 w-full bg-base-100">
+            <div className="navbar w-11/12 max-w-7xl mx-auto">
 
                 {/* START (LOGO + MOBILE MENU) */}
                 <div className="navbar-start">
