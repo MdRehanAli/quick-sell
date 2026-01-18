@@ -21,7 +21,7 @@ This project demonstrates:
 ---
 
 ## 🔗 Live Link:
-[👉 Visit QuickSell Website](https://)
+[👉 Visit QuickSell Website](https://quick-sell24.vercel.app/)
 
 ---
 
@@ -53,9 +53,9 @@ Password: QuickSell
 | ---------------- | ----------------------------- |
 | `/`              | Landing Page                  |
 | `/login`         | Login Page                    |
-| `/products`      | Product Listing Page (Public) |
-| `/products/[id]` | Product Details Page (Public) |
-| `/sell-product`  | Sell Product Page (Protected) |
+| `/items`      | Product Listing Page (Public) |
+| `/items/[id]` | Product Details Page (Public) |
+| `/add-item`  | Add Item Page (Protected) |
 
 ---
 
